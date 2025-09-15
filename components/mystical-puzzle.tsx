@@ -185,7 +185,7 @@ export default function MysticalPuzzle() {
               <p className="text-pretty">And last comes the Stranger, wrought from the void,</p>
               <p className="text-pretty">With shattered stars in his gaze deployed.</p>
               <p className="text-pretty">Before fate, he walks,</p>
-              <p className="text-pretty">Gazing upwards, for the secrets of the stars</p>
+              <p className="text-pretty">Gazing upwards, to the stars he talks</p>
 
             </div>
           </div>
