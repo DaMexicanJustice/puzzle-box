@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
 import { Draggable } from "gsap/Draggable"
+import type { Draggable as DraggableInstance } from "gsap/Draggable"
 
 // Register GSAP plugins
 if (typeof window !== "undefined") {
@@ -32,8 +33,8 @@ export default function MysticalPuzzle() {
   const containerRef = useRef<HTMLDivElement>(null)
   const [coins, setCoins] = useState<Record<string, CoinPosition>>({})
   const [sockets, setSockets] = useState<Socket[]>([])
-  const [isComplete, setIsComplete] = useState(false)
-  const draggableRefs = useRef<Record<string, any>>({})
+  const [isComplete] = useState(false)
+  const draggableRefs = useRef<Record<string, DraggableInstance | null>>({})
   const [containerDimensions, setContainerDimensions] = useState({ width: 0, height: 0 })
 
   //Add this line for coin flip state
@@ -62,7 +63,7 @@ export default function MysticalPuzzle() {
       ]
 
       setSockets(
-        socketPositions.map((pos, index) => ({
+        socketPositions.map((pos) => ({
           ...pos,
           occupied: false,
           coinId: null,
@@ -126,8 +127,9 @@ export default function MysticalPuzzle() {
       }
     })
 
+    const draggablesSnapshot = draggableRefs.current
     return () => {
-      Object.values(draggableRefs.current).forEach((draggable) => {
+      Object.values(draggablesSnapshot).forEach((draggable) => {
         if (draggable) draggable.kill()
       })
     }
@@ -178,7 +180,7 @@ export default function MysticalPuzzle() {
               <p className="text-pretty">While eldritch winds behind her moan.</p>
               <br />
               <p className="text-pretty">A single Bloom, radiant yet cursed,</p>
-              <p className="text-pretty">Stirs where the void's breath is unrehearsed.</p>
+              <p className="text-pretty">Stirs where the void&apos;s breath is unrehearsed.</p>
               <br />
               <p className="text-pretty">And last comes the Stranger, forged in gold,</p>
               <p className="text-pretty">With shattered light in his eyes so bold.</p>
