@@ -155,7 +155,7 @@ export default function MysticalPuzzle() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-screen overflow-hidden"
+      className="relative w-full h-auto min-h-[140vh] md:min-h-screen overflow-hidden"
       style={{
         backgroundImage: "url(/background.png)",
         backgroundSize: "contain",
