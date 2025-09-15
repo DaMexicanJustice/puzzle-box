@@ -176,16 +176,17 @@ export default function MysticalPuzzle() {
             <div className="text-amber-100 text-sm md:text-base leading-relaxed space-y-2 font-serif">
               <p className="text-pretty">Three relics rest in five hollowed stones,</p>
               <p className="text-pretty">First claims her place, the Seer with bones.</p>
-              <p className="text-pretty">Beneath the blighted roots she dreams alone,</p>
+              <p className="text-pretty">Beneath the blighted roots she dreams but not alone,</p>
               <p className="text-pretty">While eldritch winds behind her moan.</p>
               <br />
               <p className="text-pretty">A single Bloom, radiant yet cursed,</p>
-              <p className="text-pretty">Stirs where the void&apos;s breath is unrehearsed.</p>
+              <p className="text-pretty">Stirs where the void&apos;s breath is the most unrehearsed.</p>
               <br />
-              <p className="text-pretty">And last comes the Stranger, forged in gold,</p>
-              <p className="text-pretty">With shattered light in his eyes so bold.</p>
-              <p className="text-pretty">Ahead of fate, he walks alone,</p>
-              <p className="text-pretty">Before secrets stir or truth is known.</p>
+              <p className="text-pretty">And last comes the Stranger, wrought from the void,</p>
+              <p className="text-pretty">With shattered stars in his gaze deployed.</p>
+              <p className="text-pretty">Before fate, he walks,</p>
+              <p className="text-pretty">Gazing upwards, for the secrets of the stars</p>
+
             </div>
           </div>
         </div>
